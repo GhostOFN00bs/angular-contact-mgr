@@ -41,7 +41,7 @@ export class ViewContactComponent implements OnInit {
   }
 
   public isNotEmpty(){
-    return Object.keys(this.contact).length > 0;
+    return Object.keys(this.contact).length > 0 && Object.keys(this.group).length > 0;
   }
 
 }
