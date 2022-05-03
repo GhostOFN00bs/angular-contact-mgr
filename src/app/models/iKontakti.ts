@@ -6,4 +6,5 @@ export interface iKontakti {
   mobitel: string;
   titula: string;
   groupId: string;
+  obrazovanje: string;
 }
