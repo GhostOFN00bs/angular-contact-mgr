@@ -1,24 +1,13 @@
 {
   "contacts": [
     {
-      "ime": "Stipe",
-      "slika": "data:image/png;base64,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",
-      "mobitel": "14624724",
-      "email": "rajan@gmail.com",
-      "obrazovanje": "PMF",
-      "titula": "Bacc.Ing",
-      "groupId": "4",
-      "id": "adgkj-adg"
-    },
-    {
-      "ime": "Marino",
-      "email": "marino@net.hr",
-      "mobitel": "1361636",
-      "obrazovanje": "FESB",
-      "titula": "Bacc",
-      "groupId": "4",
-      "slika": "https://toppng.com/uploads/preview/icons-logos-emojis-user-icon-png-transparent-11563566676e32kbvynug.png",
-      "id": "MVvv_tP"
+      "ime": "Lucija",
+      "slika": "k",
+      "email": "k",
+      "obrazovanje": "k",
+      "titula": "k",
+      "groupId": "1",
+      "id": 1
     }
   ],
   "groups": [
