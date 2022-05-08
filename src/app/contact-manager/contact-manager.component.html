@@ -11,11 +11,9 @@
           <div class="col-md-6">
             <div class="row">
               <div class="col">
-                  <input type="text" class="form-control" placeholder="Pretrazi korisnika">
+                  <input type="text" name="search" placeholder="Pretrazi korisnika" [(ngModel)]="searchText">
               </div>
-              <div class="col">
-                  <input type="submit" class="btn btn-outline-dark" value="Pretrazi">
-              </div>
+
             </div>
           </div>
         </div>
@@ -41,9 +39,9 @@
 
 
 
-<div class="container mt-3" *ngIf="!loading && contacts.length > 0">
+<div class="container mt-3" *ngIf="!loading && contacts.length> 0">
   <div class="row">
-    <div class="col-md-6" *ngFor="let contact of contacts">
+    <div class="col-md-6" *ngFor="let contact of contacts | filter:searchText">
       <div class="card list-group-item-danger shadow-lg my-2">
         <div class="card-body">
           <div class="row align-items-center">
@@ -53,8 +51,26 @@
             <div class="col-sm-7">
               <ul class="list-group">
                 <li class="list-group-item">Ime : <span class="fw-bold">{{contact.ime}}</span></li>
-                <li class="list-group-item">Email : <span class="fw-bold">{{contact.email}}</span> </li>
-                <li class="list-group-item">Mobitel : <span class="fw-bold">{{contact.mobitel}}</span> </li>
+                <li class="list-group-item">Email : <span class="fw-bold">{{contact.email}}</span></li>
+                <li class="list-group-item">Mobitel : <span class="fw-bold">{{contact.mobitel}}</span></li>
+
+                <!--   ------------------------------------------------------------------- >  POKUSAJ DODAVANJA TAGOVA
+                              <mat-form-field class="example-chip-list" appearance="fill">
+                                <mat-chip-list #chipList aria-label="Tag selection">
+                                  <mat-chip *ngFor="let tag of tags" (removed)="remove(tag)">
+                                  {{tag.name}}
+                                    <button matChipRemove>
+                                       <mat-icon>cancel</mat-icon>
+                                    </button>
+                                  </mat-chip>
+                                <input placeholder="Postavite Tag"
+                                [matChipInputFor]="chipList"
+                                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                [matChipInputAddOnBlur]="addOnBlur"
+                                (matChipInputTokenEnd)="add($event)">
+                               </mat-chip-list>
+                              </mat-form-field>-->
+
               </ul>
             </div>
             <div class="col-sm-1 d-flex flex-column justify-content-center align-items-center">

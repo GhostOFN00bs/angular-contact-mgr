@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import "reflect-metadata"
 // @ts-ignore
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,8 +12,10 @@ import { ViewContactComponent } from './view-contact/view-contact.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HttpClientModule } from "@angular/common/http";
+
 // @ts-ignore
 import {FormsModule} from "@angular/forms";
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 @NgModule({
   declarations: [
@@ -25,12 +28,13 @@ import {FormsModule} from "@angular/forms";
     SpinnerComponent,
     PageNotFoundComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        Ng2SearchPipeModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

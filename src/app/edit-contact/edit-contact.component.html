@@ -32,7 +32,7 @@
         <div class="mb-2">
           <select required="true" [(ngModel)]="contact.groupId" class="form-control" [value]="contact.groupId" name="groupId">
             <option value="">Odaberi grupu</option>
-            <option [value]="group.id" *ngFor="let group of groups">{{group.ime}}</option>
+            <option [value]="group.id" *ngFor="let group of groups">{{group.ime_grupe}}</option>
           </select>
         </div>
         <div class="mb-2">

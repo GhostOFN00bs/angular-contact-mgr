@@ -28,27 +28,27 @@
     <div class="col-sm-4">
       <form (submit)="createSubmit()">
         <div class="mb-2">
-          <input type="text" required="true" [(ngModel)]="contact.ime" name="ime" class="form-control" placeholder="Ime" type="text">
+          <input type="text" required="true" [(ngModel)]="contact.ime" name="ime" class="form-control" placeholder="Ime">
         </div>
         <div class="mb-2">
-          <input type="text" required="true" [(ngModel)]="contact.slika" name="slika" class="form-control" placeholder="Slika Url" type="text">
+          <input type="text" required="true" [(ngModel)]="contact.slika" name="slika" class="form-control" placeholder="Slika Url">
         </div>
         <div class="mb-2">
-          <input type="text" required="true" [(ngModel)]="contact.email" name="email" class="form-control" placeholder="Email" type="email">
+          <input type="email" required="true" [(ngModel)]="contact.email" name="email" class="form-control" placeholder="Email">
         </div>
         <div class="mb-2">
-          <input type="text" required="true" [(ngModel)]="contact.mobitel" name="mobitel" class="form-control" placeholder="Mobitel" type="number">
+          <input type="number" required="true" [(ngModel)]="contact.mobitel" name="mobitel" class="form-control" placeholder="Mobitel">
         </div>
         <div class="mb-2">
-          <input type="text" required="true" [(ngModel)]="contact.obrazovanje" name="obrazovanje" class="form-control" placeholder="Obrazovanje" type="text">
+          <input type="text" required="true" [(ngModel)]="contact.obrazovanje" name="obrazovanje" class="form-control" placeholder="Obrazovanje">
         </div>
         <div class="mb-2">
-          <input type="text" required="true" [(ngModel)]="contact.titula" name="titula" class="form-control" placeholder="Titula" type="text">
+          <input type="text" required="true" [(ngModel)]="contact.titula" name="titula" class="form-control" placeholder="Titula">
         </div>
         <div class="mb-2">
-          <select required="true" placeholder="select" [(ngModel)]="contact.groupId" name="groupId" class="form-control" *ngIf="groups.length > 0">
-            <option value="">Odaberi grupu</option>
-            <option [value]="group.id" *ngFor="let group of groups">{{group.ime}}</option>
+          <select required="true" [(ngModel)]="contact.groupId" name="groupId" class="form-control" *ngIf="groups.length > 0">
+            <option value="" disabled selected>Odaberi grupu</option>
+            <option [value]="group.id" *ngFor="let group of groups">{{group.ime_grupe}}</option>
           </select>
         </div>
         <div class="mb-2">

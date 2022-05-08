@@ -1,4 +1,4 @@
 export interface iGrupa {
   id : string;
-  ime : string;
+  ime_grupe : string;
 }
